@@ -105,7 +105,7 @@ In this project, I applied the concepts of Q-learning to train an agent—the bi
 
 For future work, several improvements can be made to enhance the performance and adaptability of the agent. Implementing Deep Q-Networks (DQN) can allow the agent to handle more complex state spaces by using neural networks for better decision-making. We can also explore multi-agent reinforcement learning or developing a human versus AI mode and can provide additional challenges for the agent to learn from. 
 
-This project demonstrates the practical application of reinforcement learning for AI to play the flapping bird game, and reinforcing key theoretical concepts of Q-learning and opening avenues for more complex and adaptive agents (like DQN).
+This project demonstrates the practical application of reinforcement learning for agent to play the flapping bird game, and reinforcing key theoretical concepts of Q-learning and opening avenues for more complex and adaptive agents (like DQN).
 
 # 8. References
 * https://www.geeksforgeeks.org/q-learning-in-python/
