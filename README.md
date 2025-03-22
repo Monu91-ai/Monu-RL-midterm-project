@@ -114,8 +114,8 @@ This project demonstrates the practical application of reinforcement learning to
 * https://www.youtube.com/watch?v=ejSen40GIzg&t=226s
 * https://github.com/hsahib2912/AI-Flappy-Birds/blob/master/AI_project.py
 
-# Acknowledgement 
-
+# Acknowledgement
+The environment setup code for this project was adapted from '[AI_project.py](https://github.com/hsahib2912/AI-Flappy-Birds/blob/master/AI_project.py)' with minor modifications. The Q-value update implementation, which originally was using a different approach for the learning rate, has been modified to follow the Q-learning update definition discussed in course. The main function has been entirely developed by me. 
 
 
 
