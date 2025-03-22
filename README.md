@@ -2,15 +2,15 @@
 
 # 1. Introduction
 # The Flappy Bird Game 
-* Directing a flying bird moves continuously to the right, through the space between two pipes. Earn one point after passing through one set of pipes. 
-* Two Actions in each frame between two sets of pipes: 
+* Directing a flying bird moves to the right, through the space between two pipes. Score one point after passing through one set of pipes. 
+* Two Actions possibly in each frame between two sets of pipes: 
 Flap: bird will jump upward, Don’t Flap: bird will start falling down 
 * Game is over when the bird touches the lower boundary or the pipes
 * Goal is to score as many points as we can.
 
 # Reinforcement Learning
 * In reinforcement learning a software agent makes observations and then takes actions within an environment based on the rewards it receives.  
-* Agent - Software, Environment - Flappy Bird Game, Rewards - surviving (each step) - +15, Passing through pipes - +15 (same as survival), Crashing (dying) - -1000. 
+* Agent: - Software, Environment: - Flappy Bird Game, Rewards: - surviving (each step) - +15, Passing through pipes: - +15 (same as survival), Crashing (dying): - -1000. 
 * Our objective is to train the agent in a way (policy) that will maximize its expected reward over time. 
 
 # 2. Dataset Source & Description
@@ -22,8 +22,6 @@ X: Horizontal distance from the bird to the next bottom pipe.
 
 Y: Vertical distance from the bird to the gap between the pipes.
 
-States are discretized to keep the Q-table manageable.
-
 # 3. Data Exploration
 As our data is generated during the game play:
 
@@ -32,7 +30,8 @@ As our data is generated during the game play:
 * Rewards are assigned based on survival or crash events.
   Rewards: +15 for survival at each time step, -1000 for crashing into pipes or ground.
 # 4.  Methods
-Q-Learning Algorithm 
+# Q-Learning Algorithm
+
 Our objective is to maximize the expected reward and train the agent to take the best action in each state. One of the most powerful reinforcement learning algorithms is Q-learning Algorithm. 
 
 The aim of the Q-learning is to learn a policy, which tells the agent what action to take in a state based on its Q-value. Q-value is basically the quality value of a state-action pair (s,a) which is based on the discounted future rewards the agent can expect on average. 
@@ -97,16 +96,16 @@ Over time, the bird improves its performance:
 * As the number of generations increases, the bird learns from the environment resulting in higher scores.
 * If the bird encounters a state it has not experienced before, it crashes.
 
-The experiments with different learning rates (α) show how important the learning rate is in reinforcement learning. However the discount rate wouldn't have effected because it would be standard over the results. Lower learning rates (e.g., α = 0.2) result in slower learning, with the bird taking more time to accumulate. We can see the same from the average score also for each leaning rate. Higher learning rates (e.g., α = 0.6 and 0.9) allow for faster learning but may also crash with no balanced exploration. It happens because the environment is generated randomly in each game, and the bird may encounter new, unseen states. As a result, the agent can fail when faced with unfamiliar situations in the environment. 
+The experiments with different learning rates (α) show how important the learning rate is in reinforcement learning. However the discount rate wouldn't have affected because it would be standard over the results. Lower learning rates (e.g., α = 0.2) result in slower learning, with the bird taking more time to accumulate. We can see the same from the average score also for each leaning rate. Higher learning rates (e.g., α = 0.6 and 0.9) allow for faster learning but may also crash with no balanced exploration. It happens because the environment is generated randomly in each game, and the bird may encounter new, unseen states. As a result, the agent can fail when faced with unfamiliar situations in the environment. 
 
 Overall, the project highlights the balance between exploration and exploitation in reinforcement learning. While higher learning rates promote faster adaptation, they also increase the risk of instability in the environment. 
 
 # 7. Conclusion
-In this project, I applied the concepts of Q-learning to train an agent—the bird—to play the game of Flappy Bird. The bird learns by interacting with the environment and using its previous experiences to make better decisions. Over time, it builds a policy that guides its actions to maximize its score. For the Q-table I have used 3-D Q-matrix to implement the problem. One dimension signifies the horizontal distance of the bird from the lower pipe, the second dimension signifies the vertical distance of the bird from lower pipe (which is the state of the bird) and the last dimension signifies whether the bird has to flap or not.
+In this project, I applied the concepts of Q-learning to train an agent—the bird to play the game of Flappy Bird. The bird learns by interacting with the environment and using its previous experiences to make better decisions. Over time, it builds a policy that guides its actions to maximize its score. For the Q-table I have used 3-D Q-matrix to implement the problem.
 
 For future work, several improvements can be made to enhance the performance and adaptability of the agent. Implementing Deep Q-Networks (DQN) can allow the agent to handle more complex state spaces by using neural networks for better decision-making. We can also explore multi-agent reinforcement learning or developing a human versus AI mode and can provide additional challenges for the agent to learn from. 
 
-This project demonstrates the practical application of reinforcement learning to game AI, reinforcing key theoretical concepts of Q-learning and opening avenues for more complex and adaptive agents.
+This project demonstrates the practical application of reinforcement learning for AI to play the flapping bird game, and reinforcing key theoretical concepts of Q-learning and opening avenues for more complex and adaptive agents (like DQN).
 
 # 8. References
 * https://www.geeksforgeeks.org/q-learning-in-python/
