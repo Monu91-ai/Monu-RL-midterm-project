@@ -89,7 +89,7 @@ Q[x_prev][y_prev][action] = (1 - alpha) * Q[x_prev][y_prev][action] + alpha * (r
 
 # 6. Final Result  
 
-In the beginning, the bird starts with no expereince, hence it gradually learns to stay alive and navigate through the pipes. As expected, the scores in the early generations are relatively low across all learning rates due to the bird’s lack of experience.
+In the beginning, the bird starts with no experience, so it gradually learns to stay alive and navigate through the pipes. As expected, the scores in the early generations are relatively low across all learning rates due to the bird’s lack of experience.
 
 Over time, the bird improves its performance:
 
@@ -102,7 +102,7 @@ The experiments with different learning rates (α) show how important the learni
 Overall, the project highlights the balance between exploration and exploitation in reinforcement learning. While higher learning rates promote faster adaptation, they also increase the risk of instability in the environment. 
 
 # 7. Conclusion
-In this project, I applied the concepts of Q-learning to train an agent—the bird—to play the game of Flappy Bird. The bird learns by interacting with the environment and using its previous experiences to make better decisions. Over time, it builds a policy that guides its actions to maximize its score. For the Q-table I have used 3-D Q-matrix to implement the problem. One dimension signifies the horizontal distance of the bird from the lower pipe, the second dimension signifies the vertical distance of the bird from lower pipe (which is state of the bird) and the last dimension signifies whether the bird has to flap or not.
+In this project, I applied the concepts of Q-learning to train an agent—the bird—to play the game of Flappy Bird. The bird learns by interacting with the environment and using its previous experiences to make better decisions. Over time, it builds a policy that guides its actions to maximize its score. For the Q-table I have used 3-D Q-matrix to implement the problem. One dimension signifies the horizontal distance of the bird from the lower pipe, the second dimension signifies the vertical distance of the bird from lower pipe (which is the state of the bird) and the last dimension signifies whether the bird has to flap or not.
 
 For future work, several improvements can be made to enhance the performance and adaptability of the agent. Implementing Deep Q-Networks (DQN) can allow the agent to handle more complex state spaces by using neural networks for better decision-making. We can also explore multi-agent reinforcement learning or developing a human versus AI mode and can provide additional challenges for the agent to learn from. 
 
@@ -113,6 +113,8 @@ This project demonstrates the practical application of reinforcement learning to
 * https://www.youtube.com/watch?v=yyNOa9aB77E&t=570s
 * https://www.youtube.com/watch?v=ejSen40GIzg&t=226s
 * https://github.com/hsahib2912/AI-Flappy-Birds/blob/master/AI_project.py
+
+# Acknowledgement 
 
 
 
