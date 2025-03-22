@@ -3,7 +3,7 @@
 # 1. Introduction
 # The Flappy Bird Game 
 * Directing a flying bird moves to the right, through the space between two pipes. Score one point after passing through one set of pipes. 
-* Two Actions possibly in each frame between two sets of pipes: 
+* Two Actions possible in each frame between two sets of pipes: 
 Flap: bird will jump upward, Don’t Flap: bird will start falling down 
 * Game is over when the bird touches the lower boundary or the pipes
 * Goal is to score as many points as we can.
@@ -32,7 +32,7 @@ As our data is generated during the game play:
 # 4.  Methods
 # Q-Learning Algorithm
 
-Our objective is to maximize the expected reward and train the agent to take the best action in each state. One of the most powerful reinforcement learning algorithms is Q-learning Algorithm. 
+Our objective is to maximize the expected reward and train the agent to take the best action in each state. I will use one of the most powerful reinforcement learning algorithms Q-learning Algorithm to train the agent. 
 
 The aim of the Q-learning is to learn a policy, which tells the agent what action to take in a state based on its Q-value. Q-value is basically the quality value of a state-action pair (s,a) which is based on the discounted future rewards the agent can expect on average. 
 
@@ -71,7 +71,7 @@ Reward for crash (death): -1000
 
 Action selection policy: Greedy (considering the maximum Q-value) 
 
-Generations: Each generation runs until the bird crashes. After each generation the score is stored and plotted. 
+Generations: Each generation runs until the bird crashes. After each generation the score is stored. 
 
 Score: Number of pipes successfully passed. 
 
@@ -96,16 +96,16 @@ Over time, the bird improves its performance:
 * As the number of generations increases, the bird learns from the environment resulting in higher scores.
 * If the bird encounters a state it has not experienced before, it crashes.
 
-The experiments with different learning rates (α) show how important the learning rate is in reinforcement learning. However the discount rate wouldn't have affected because it would be standard over the results. Lower learning rates (e.g., α = 0.2) result in slower learning, with the bird taking more time to accumulate. We can see the same from the average score also for each leaning rate. Higher learning rates (e.g., α = 0.6 and 0.9) allow for faster learning but may also crash with no balanced exploration. It happens because the environment is generated randomly in each game, and the bird may encounter new, unseen states. As a result, the agent can fail when faced with unfamiliar situations in the environment. 
+The experiments with different learning rates (α) show how important the learning rate is in reinforcement learning. However the discount rate wouldn't have affected because it would be standard over the results. Lower learning rates (e.g., α = 0.2) result in slower learning, with the bird taking more time to accumulate. We can see the same from the average score also for each learning rate. Higher learning rates (e.g., α = 0.6 and 0.9) allow for faster learning but may also crash with no balanced exploration. It happens because the environment is generated randomly in each game, and the bird may encounter new, unseen states. As a result, the agent can fail when faced with unfamiliar situations in the environment. 
 
-Overall, the project highlights the balance between exploration and exploitation in reinforcement learning. While higher learning rates promote faster adaptation, they also increase the risk of instability in the environment. 
+Overall, the project highlights the balance between exploration and exploitation in reinforcement learning. The higher learning rates promote faster adaptation as per the results we saw.  
 
 # 7. Conclusion
 In this project, I applied the concepts of Q-learning to train an agent—the bird to play the game of Flappy Bird. The bird learns by interacting with the environment and using its previous experiences to make better decisions. Over time, it builds a policy that guides its actions to maximize its score. For the Q-table I have used 3-D Q-matrix to implement the problem.
 
 For future work, several improvements can be made to enhance the performance and adaptability of the agent. Implementing Deep Q-Networks (DQN) can allow the agent to handle more complex state spaces by using neural networks for better decision-making. We can also explore multi-agent reinforcement learning or developing a human versus AI mode and can provide additional challenges for the agent to learn from. 
 
-This project demonstrates the practical application of reinforcement learning for agent to play the flapping bird game, and reinforcing key theoretical concepts of Q-learning and opening avenues for more complex and adaptive agents (like DQN).
+This project demonstrates the practical application of reinforcement learning for agent to play the flapping bird game, by reinforcing theoretical concepts of Q-learning and opening avenues for more complex and adaptive agents algorithms (like DQN).
 
 # 8. References
 * https://www.geeksforgeeks.org/q-learning-in-python/
